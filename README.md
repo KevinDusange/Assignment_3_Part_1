@@ -38,6 +38,7 @@ sudo chown -R webgen:webgen /var/lib/webgen
 #### For steps 2, 3, and 4 I am showing the commands using `cp` but you can also use `mv`
 
 `cp` will copy the sripts to the specified locations but also leave the original file in the original downloaded location
+
 `mv` will move the file to the specified location and will not leave a copy anywhere
 
 ### Step 2: Copy the generate_index script
