@@ -13,8 +13,11 @@ We will create a new system user called `webgen` using the command below:
 ```bash
 sudo useradd --system -d /var/lib/webgen -s /usr/sbin/nologin webgen
 ```
+
 `--system`: This option creates a system user (UID below 1000) instead of a regular user
+
 `-d`: This option specifies the home directory of the new user
+
 `-s`: This option specifies the login shell of the new user (in this case we will set nologin because it is a system user)
 
 Now we will create the sub-directories inside of the new users home directory using the commands below:
