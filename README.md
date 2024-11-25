@@ -161,3 +161,5 @@ To                         Action      From
 80/tcp (v6)                ALLOW IN    Anywhere (v6)
 22/tcp (v6)                ALLOW IN    Anywhere (v6)
 ```
+
+Done! Now your server is up and running!
