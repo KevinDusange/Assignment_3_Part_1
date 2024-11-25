@@ -6,7 +6,7 @@
 
 ### Step 1: Create a System User
 
-The reason we are creating a system user instaed of a regular user is because a system user has better security due to limited privelages and a system user is better suited for running automated tasks such as running nginx due to its isolation from regular users.  
+The reason we are creating a system user instaed of a regular user is because a system user has better security due to limited privelages and a system user is better suited for running system service tasks such as running nginx due to its isolation from regular users. 
 
 We will create a new system user called `webgen` using the command below:
 
