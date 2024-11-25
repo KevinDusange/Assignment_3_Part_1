@@ -108,7 +108,7 @@ sudo ln -s /etc/nginx/sites-available/server_block.conf /etc/nginx/sites-enabled
 For more information as to why we created these directories refer to section 3.2.3.1 on the nginx Arch Wiki page
 https://wiki.archlinux.org/title/Nginx
 
-The main reason it is important to use a separate server block file instead of modifying the main `nginx.conf` file directly is because we can enable or disable certain sites using symbolic links. We can include sites-enabled to the end of the http block in the `nginx.conf` file so we can control which sites to be enabled. 
+The main reason it is important to use a separate server block file instead of modifying the main `nginx.conf` file directly is because we can enable or disable certain sites using symbolic links. We can include sites-enabled to the end of the http block in the `nginx.conf` file so we can control which sites to be enabled. I have already added this in the `nginx.conf` file. 
 
 Finally to test our `nginx` we can use the command below:
 
