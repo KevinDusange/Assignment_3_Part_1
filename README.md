@@ -4,7 +4,7 @@
 
 ### Setting Up A New Server
 
-#### Step 1: Create a System User
+### Step 1: Create a System User
 
 The reason we are creating a system user instaed of a regular user is because a system user has better security due to limited privelages and a system user is better suited for running automated tasks such as running nginx due to its isolation from regular users.  
 
@@ -32,12 +32,12 @@ sudo chown -R webgen:webgen /var/lib/webgen
 
 `-R`: This option means the ownership will be applied recursively which means it will change the ownership of the `/var/lib/webgen` directory as well as all its subdirectories (such as bin and HTML). 
 
-### For steps 2, 3, and 4 I am showing the commands using `cp` but you can also use `mv`
+#### For steps 2, 3, and 4 I am showing the commands using `cp` but you can also use `mv`
 
 `cp` will copy the sripts to the specified locations but also leave the original file in the original downloaded location
 `mv` will move the file to the specified location and will not leave a copy anywhere
 
-#### Step 2: Copy the generate_index script
+### Step 2: Copy the generate_index script
 
 After downloading the generate_index script use the copy command below to copy it to the correct location:
 
@@ -51,7 +51,7 @@ And we also need to make sure the script can be executed and we can do this by u
 sudo chmod +x /var/lib/webgen/bin/generate_index
 ```
 
-#### Step 3: Copy the systemd service file and timer file
+### Step 3: Copy the systemd service file and timer file
 
 After downloading the `generate-index.server` and `generate-index.timer` files we need to copy the files to the correct locations using the command below. Since these are .service and .timer files, they will need to be moved into the `/etc/systemd/system` directory because that is where those types of files belong.
 
@@ -79,7 +79,7 @@ To check if the service runs correctly we can run the command below:
 sudo systemctl status generate-index.service
 ```
 
-#### Step 4: Copy the nginx configuration files
+### Step 4: Copy the nginx configuration files
 
 After downloading the `nginx.conf` files we will need to move it to the nginx configuration directory which is `/etc/nginx/nginx.conf` using the command below:
 
@@ -118,7 +118,7 @@ We can also view the status of `nginx` using the command below:
 sudo systemctl status nginx
 ```
 
-#### Step 5: Configure UFW (Uncomplicated Firewall)
+### Step 5: Configure UFW (Uncomplicated Firewall)
 
 First we'll install and enable `UFW` using the commands below:
 
